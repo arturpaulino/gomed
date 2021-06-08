@@ -1,0 +1,12 @@
+{
+  "name": "gomed",
+  "displayName": "gomed",
+  "expo": {
+    "name": "gomed",
+    "slug": "gomes",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
