@@ -8,6 +8,7 @@ interface Props extends RectButtonProperties  {
 }
 
 export function Button({title, ...rest }: Props) {
+
   return (
     <Container {...rest}>
       <Title>{title}</Title>

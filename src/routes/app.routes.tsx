@@ -8,13 +8,26 @@ import {Dashboard} from "../screens/Dashboard";
 import {Register} from "../screens/Register";
 import {Receita} from "../screens/RegisterReceita";
 
-import {Resume} from "../screens/Resume";
-import theme from "../global/styles/theme";
+import {    TransactionCardProps } from "../compontes/TransactionCard";
 
+interface Props {
+  data: TransactionCardProps;
+}
 const {Navigator, Screen} = createBottomTabNavigator();
 
 export function AppRoutes() {
   const theme = useTheme();
+  const  Params = {
+    id: "",
+    nomemedico: "",
+    telefonemedico: "",
+    endereco: "",
+    data: "Data",
+    hora: "Hora",
+    sintoma: "",
+
+  }
+
   return (
     <Navigator
       tabBarOptions={{
@@ -45,6 +58,7 @@ export function AppRoutes() {
       <Screen
         name="Conulstas"
         component={Register}
+        initialParams={  { dados: Params }    }
         options={{
           tabBarIcon: ({size, color}) => (
             <MaterialIcons

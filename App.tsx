@@ -15,9 +15,12 @@ import {
 
 import {  useAuth } from "./src/hooks/auth";
 
+/*
 
+*/
 import theme from "./src/global//styles/theme";
 import { AuthProvider} from "./src/hooks/auth";
+import {Teste} from "./src/screens"
 
 export default function App() {
   const  {isLoading   } = useAuth()
@@ -32,9 +35,11 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
         <AuthProvider>
+
           <Routes/>
         </AuthProvider>
 
     </ThemeProvider>
+
   );
 }

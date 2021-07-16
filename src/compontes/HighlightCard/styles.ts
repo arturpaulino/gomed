@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components/native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 import { Feather } from "@expo/vector-icons";
-
+import { RectButton }   from "react-native-gesture-handler";
 interface TypeProps {
   type: "up" | "down" | "total";
 }
 
-export const Container = styled.View<TypeProps>`
+
+export const Container = styled(RectButton)<TypeProps>`
  background-color: ${({ theme, type }) =>
     type == "total" ? theme.colors.secondary : theme.colors.shape};
 

@@ -20,23 +20,25 @@ interface Category {
 }
 
 export interface TransactionCardProps {
-  type: "positive" | "negative";
+  id: string;
   nomemedico: string;
   telefonemedico: string;
   endereco: string;
   data: string;
+  hora: string;
   sintoma: string;
 }
 
 interface Props {
   data: TransactionCardProps;
 }
-export function TransactionCard({data}: Props) {
+export function TransactionCard({data,  ...rest}: Props) {
 
   return (
-    <Container>
+    <Container {...rest}>
       <Title>{data.nomemedico} {data.telefonemedico}</Title>
       <Data>{data.data}</Data>
+      <Data>{data.hora}</Data>
       <Footer>
         <Date>{data.endereco}</Date>
       </Footer>
